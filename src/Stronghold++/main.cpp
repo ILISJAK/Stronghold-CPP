@@ -1,5 +1,4 @@
 #include <iostream>
-#include <memory>
 #include "Exception.h"
 #include "Town.h"
 #include "Archer.h"

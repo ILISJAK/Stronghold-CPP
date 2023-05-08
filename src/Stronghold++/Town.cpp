@@ -271,47 +271,115 @@ void Town::trainTroop(Troop* troop)
     }
 }
 
+//void Town::raid(Town* town) // eraseat iz vektora pa obrisat
+//{
+//    std::cout << "Town " << getTeam() << " has attacked town " << town->getTeam() << "!" << std::endl;
+//    std::cout.flush();
+//    int allyCasualties = 0;
+//    int enemyCasualties = 0;
+//    while (1)
+//    {
+//        Troop* attacker = this->army.front();
+//        Troop* target = town->army.front();
+//        if (!this->army.empty())
+//        {
+//            if (!town->army.empty())
+//            {
+//                attacker->attack(target);
+//                if (target->getHealth() <= 0)
+//                {
+//                    enemyCasualties++;
+//                    town->army.erase(town->army.begin());
+//                    delete target;
+//                }
+//                if (attacker->getHealth() <= 0)
+//                {
+//                    allyCasualties++;
+//                    this->army.erase(this->army.begin());
+//                    delete attacker;
+//                    setActivePopulation(getActivePopulation() - 1);
+//                    setPopulation(getPopulation() - 1);
+//                }
+//            }
+//            else
+//            {
+//                std::cout << "Town " << getTeam() << " has won the battle." << std::endl;
+//                break;
+//            }
+//        }
+//        else
+//        {
+//            std::cout << "Town " << town->getTeam() << " has won the battle." << std::endl;
+//            break;
+//        }
+//    }
+//    std::cout << "Town " << getTeam() << " casualties: " << allyCasualties << std::endl;
+//    std::cout << "Town " << town->getTeam() << " casualties: " << enemyCasualties << std::endl;
+//}
+
 void Town::raid(Town* town) // eraseat iz vektora pa obrisat
 {
     std::cout << "Town " << getTeam() << " has attacked town " << town->getTeam() << "!" << std::endl;
     int allyCasualties = 0;
     int enemyCasualties = 0;
+    bool hasAttackPriority = true; // pratimo koja strana napada (izbjegavamo beskonacnu petlju)
+
     while (1)
     {
-        Troop* attacker = this->army.front();
-        Troop* target = town->army.front();
-        if (!this->army.empty())
+        if (this->army.empty() || town->army.empty())
         {
-            if (!town->army.empty())
-            {
-                attacker->attack(target);
-                if (target->getHealth() <= 0)
-                {
-                    enemyCasualties++;
-                    town->army.erase(town->army.begin());
-                    delete target;
-                }
-                if (attacker->getHealth() <= 0)
-                {
-                    allyCasualties++;
-                    this->army.erase(this->army.begin());
-                    delete attacker;
-                    setActivePopulation(getActivePopulation() - 1);
-                    setPopulation(getPopulation() - 1);
-                }
-            }
-            else
-            {
-                std::cout << "Town " << getTeam() << " has won the battle." << std::endl;
-                break;
-            }
+            break;
+        }
+
+        Troop* attacker;
+        Troop* target;
+
+        if (hasAttackPriority)
+        {
+            attacker = this->army.front();
+            target = town->army.front();
         }
         else
         {
-            std::cout << "Town " << town->getTeam() << " has won the battle." << std::endl;
-            break;
+            attacker = town->army.front();
+            target = this->army.front();
         }
+
+        attacker->attack(target);
+        if (target->getHealth() <= 0)
+        {
+            if (hasAttackPriority)
+            {
+                enemyCasualties++;
+                town->army.erase(town->army.begin());
+            }
+            else
+            {
+                allyCasualties++;
+                this->army.erase(this->army.begin());
+            }
+            delete target;
+        }
+        if (attacker->getHealth() <= 0)
+        {
+            if (hasAttackPriority)
+            {
+                allyCasualties++;
+                this->army.erase(this->army.begin());
+                setActivePopulation(getActivePopulation() - 1);
+                setPopulation(getPopulation() - 1);
+            }
+            else
+            {
+                enemyCasualties++;
+                town->army.erase(town->army.begin());
+            }
+            delete attacker;
+        }
+
+        hasAttackPriority = !hasAttackPriority; // switchamo stranu
     }
+
     std::cout << "Town " << getTeam() << " casualties: " << allyCasualties << std::endl;
     std::cout << "Town " << town->getTeam() << " casualties: " << enemyCasualties << std::endl;
 }
@@ -333,21 +401,15 @@ void Town::attackLord(Town* town)
     std::cout << "Town " << getTeam() << " has attacked the town " << town->getTeam() << " Lord!" << std::endl;
     while (1)
     {
-        // std::cout << "TEST1" << std::endl;
         Troop* attacker = this->army.front();
         Troop* target = town->lord;
-        // std::cout << "TEST2" << std::endl;
         if (!this->army.empty())
         {
-            // std::cout << "TEST3" << std::endl;
             if (town->army.empty())
             {
-                // std::cout << "TEST4" << std::endl;
                 attacker->attack(target);
-                // std::cout << "TEST5" << std::endl;
                 if (target->getHealth() <= 0)
                 {
-                    // std::cout << "King" << std::endl;
                     this->gold += town->gold;
                     this->rations += town->rations;
                     this->stone += town->stone;
@@ -361,7 +423,6 @@ void Town::attackLord(Town* town)
                 }
                 if (attacker->getHealth() <= 0)
                 {
-                    // std::cout << "Troop" << std::endl;
                     this->army.erase(this->army.begin());
                     delete attacker;
                     setActivePopulation(getActivePopulation() - 1);
