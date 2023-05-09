@@ -1,2 +1,3 @@
+D:/dev/repos/projekt/Stronghold++/build/CMakeFiles/StrongholdCPP.dir
 D:/dev/repos/projekt/Stronghold++/build/CMakeFiles/ALL_BUILD.dir
 D:/dev/repos/projekt/Stronghold++/build/CMakeFiles/ZERO_CHECK.dir

@@ -8,21 +8,21 @@ StrongholdApi::StrongholdApi(utility::string_t url) : m_listener(url) {
 }
 
 void StrongholdApi::handle_get(http_request message) {
-	// 
+	ucout << "Received GET request: " << message.to_string() << std::endl;
+	message.reply(status_codes::OK, U("GET request received."));
 }
 
 void StrongholdApi::handle_put(http_request message) {
-	// 
+	ucout << "Received PUT request: " << message.to_string() << std::endl;
+	message.reply(status_codes::OK, U("PUT request received."));
 }
 
 void StrongholdApi::handle_post(http_request message) {
-	// 
+	ucout << "Received POST request: " << message.to_string() << std::endl;
+	message.reply(status_codes::OK, U("POST request received."));
 }
 
 void StrongholdApi::handle_delete(http_request message) {
-	// 
+	ucout << "Received DELETE request: " << message.to_string() << std::endl;
+	message.reply(status_codes::OK, U("DELETE request received."));
 }
-
-
-
-

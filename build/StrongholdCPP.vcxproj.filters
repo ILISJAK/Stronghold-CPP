@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="D:\dev\repos\projekt\Stronghold++\src\Stronghold++\Archer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\dev\repos\projekt\Stronghold++\src\Stronghold++\Exception.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\dev\repos\projekt\Stronghold++\src\Stronghold++\Knight.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\dev\repos\projekt\Stronghold++\src\Stronghold++\Lord.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\dev\repos\projekt\Stronghold++\src\Stronghold++\Maceman.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\dev\repos\projekt\Stronghold++\src\Stronghold++\Market.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\dev\repos\projekt\Stronghold++\src\Stronghold++\Pikeman.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\dev\repos\projekt\Stronghold++\src\Stronghold++\StoneQuarry.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\dev\repos\projekt\Stronghold++\src\Stronghold++\Structure.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\dev\repos\projekt\Stronghold++\src\Stronghold++\Town.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\dev\repos\projekt\Stronghold++\src\Stronghold++\Troop.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\dev\repos\projekt\Stronghold++\src\Stronghold++\WheatFarm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\dev\repos\projekt\Stronghold++\src\Stronghold++\WoodCamp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\dev\repos\projekt\Stronghold++\src\Stronghold++\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\dev\repos\projekt\Stronghold++\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{FB4A6083-FDCF-32E4-A7B6-3D0DA2CFD4DE}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

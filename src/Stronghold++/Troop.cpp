@@ -13,100 +13,100 @@
 Troop::Troop() : Troop::Troop(IDENTIFIER, MAXHEALTH, DAMAGE, DEFENSE, AGILITY, COST, MOUNTED, RANGED) {}
 Troop::Troop(std::string identifier, double maxHealth, double damage, double defense, double agility, int cost, bool mounted, bool ranged)
 {
-    this->troopIdentifier = identifier;
-    this->maxHealth = maxHealth;
-    this->health = maxHealth;
-    this->damage = damage;
-    this->defense = defense;
-    this->agility = agility;
-    this->cost = cost;
-    this->mounted = mounted;
-    this->ranged = ranged;
+	this->troopIdentifier = identifier;
+	this->maxHealth = maxHealth;
+	this->health = maxHealth;
+	this->damage = damage;
+	this->defense = defense;
+	this->agility = agility;
+	this->cost = cost;
+	this->mounted = mounted;
+	this->ranged = ranged;
 }
 Troop::~Troop() {}
 
 Troop::Troop(const Troop& troop) {}
 void Troop::attack(Troop* target)
 {
-    if (target == nullptr)
-    {
-        std::cout << "target is nullptr" << std::endl;
-        return;
-    }
-    target->health -= this->damage;
-    this->health -= target->damage;
+	if (target == nullptr)
+	{
+		std::cout << "target is nullptr" << std::endl;
+		return;
+	}
+	target->health -= this->damage;
+	this->health -= target->damage;
 }
 void const Troop::info()
 {
-    std::cout << troopIdentifier << " ";
-    std::cout << "HP: " << health << "/" << maxHealth << std::endl;
+	std::cout << troopIdentifier << " ";
+	std::cout << "HP: " << health << "/" << maxHealth << std::endl;
 }
 void const Troop::stats()
 {
-    info();
-    std::cout << "DMG: " << damage << std::endl;
-    std::cout << "DEF: " << defense << std::endl;
-    std::cout << "AGI: " << agility << std::endl;
-    std::cout << "MOUNTED: " << mounted << std::endl;
-    std::cout << "RANGED: " << ranged << std::endl;
+	info();
+	std::cout << "DMG: " << damage << std::endl;
+	std::cout << "DEF: " << defense << std::endl;
+	std::cout << "AGI: " << agility << std::endl;
+	std::cout << "MOUNTED: " << mounted << std::endl;
+	std::cout << "RANGED: " << ranged << std::endl;
 }
 
 // getteri
 double Troop::getHealth()
 {
-    return health;
+	return health;
 }
 double Troop::getDamage()
 {
-    return damage;
+	return damage;
 }
 double Troop::getDefense()
 {
-    return defense;
+	return defense;
 }
 double Troop::getAgility()
 {
-    return agility;
+	return agility;
 }
 int Troop::getCost()
 {
-    return cost;
+	return cost;
 }
 bool Troop::getMounted()
 {
-    return mounted;
+	return mounted;
 }
 bool Troop::getRanged()
 {
-    return ranged;
+	return ranged;
 }
 
 // setteri
 void Troop::setHealth(double health)
 {
-    this->health = health;
+	this->health = health;
 }
 void Troop::setDamage(double damage)
 {
-    this->damage = damage;
+	this->damage = damage;
 }
 void Troop::setDefense(double defense)
 {
-    this->defense = defense;
+	this->defense = defense;
 }
 void Troop::setAgility(double defense)
 {
-    this->agility = agility;
+	this->agility = agility;
 }
 void Troop::setCost(int cost)
 {
-    this->cost = cost;
+	this->cost = cost;
 }
-bool Troop::setMounted(bool mounted)
+void Troop::setMounted(bool mounted)
 {
-    this->mounted = mounted;
+	this->mounted = mounted;
 }
-bool Troop::setRanged(bool ranged)
+void Troop::setRanged(bool ranged)
 {
-    this->ranged = ranged;
+	this->ranged = ranged;
 }

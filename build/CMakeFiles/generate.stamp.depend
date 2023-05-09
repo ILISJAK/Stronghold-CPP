@@ -3,6 +3,7 @@ C:/Program Files/CMake/share/cmake-3.26/Modules/CMakeCInformation.cmake
 C:/Program Files/CMake/share/cmake-3.26/Modules/CMakeCXXInformation.cmake
 C:/Program Files/CMake/share/cmake-3.26/Modules/CMakeCommonLanguageInclude.cmake
 C:/Program Files/CMake/share/cmake-3.26/Modules/CMakeDependentOption.cmake
+C:/Program Files/CMake/share/cmake-3.26/Modules/CMakeFindDependencyMacro.cmake
 C:/Program Files/CMake/share/cmake-3.26/Modules/CMakeGenericSystem.cmake
 C:/Program Files/CMake/share/cmake-3.26/Modules/CMakeInitializeConfigs.cmake
 C:/Program Files/CMake/share/cmake-3.26/Modules/CMakeLanguageInformation.cmake
@@ -13,11 +14,25 @@ C:/Program Files/CMake/share/cmake-3.26/Modules/Compiler/CMakeCommonCompilerMacr
 C:/Program Files/CMake/share/cmake-3.26/Modules/Compiler/MSVC-C.cmake
 C:/Program Files/CMake/share/cmake-3.26/Modules/Compiler/MSVC-CXX.cmake
 C:/Program Files/CMake/share/cmake-3.26/Modules/Compiler/MSVC.cmake
+C:/Program Files/CMake/share/cmake-3.26/Modules/FindPackageHandleStandardArgs.cmake
+C:/Program Files/CMake/share/cmake-3.26/Modules/FindPackageMessage.cmake
+C:/Program Files/CMake/share/cmake-3.26/Modules/FindZLIB.cmake
 C:/Program Files/CMake/share/cmake-3.26/Modules/Platform/Windows-MSVC-C.cmake
 C:/Program Files/CMake/share/cmake-3.26/Modules/Platform/Windows-MSVC-CXX.cmake
 C:/Program Files/CMake/share/cmake-3.26/Modules/Platform/Windows-MSVC.cmake
 C:/Program Files/CMake/share/cmake-3.26/Modules/Platform/Windows.cmake
 C:/Program Files/CMake/share/cmake-3.26/Modules/Platform/WindowsPaths.cmake
+C:/Program Files/CMake/share/cmake-3.26/Modules/SelectLibraryConfigurations.cmake
+C:/vcpkg/installed/x64-windows/share/cpprestsdk/cpprestsdk-config-version.cmake
+C:/vcpkg/installed/x64-windows/share/cpprestsdk/cpprestsdk-config.cmake
+C:/vcpkg/installed/x64-windows/share/cpprestsdk/cpprestsdk-targets-debug.cmake
+C:/vcpkg/installed/x64-windows/share/cpprestsdk/cpprestsdk-targets-release.cmake
+C:/vcpkg/installed/x64-windows/share/cpprestsdk/cpprestsdk-targets.cmake
+C:/vcpkg/installed/x64-windows/share/unofficial-brotli/unofficial-brotli-config.cmake
+C:/vcpkg/installed/x64-windows/share/unofficial-brotli/unofficial-brotli-targets-debug.cmake
+C:/vcpkg/installed/x64-windows/share/unofficial-brotli/unofficial-brotli-targets-release.cmake
+C:/vcpkg/installed/x64-windows/share/unofficial-brotli/unofficial-brotli-targets.cmake
+C:/vcpkg/installed/x64-windows/share/zlib/vcpkg-cmake-wrapper.cmake
 C:/vcpkg/scripts/buildsystems/vcpkg.cmake
 D:/dev/repos/projekt/Stronghold++/CMakeLists.txt
 D:/dev/repos/projekt/Stronghold++/build/CMakeFiles/3.26.3/CMakeCCompiler.cmake
