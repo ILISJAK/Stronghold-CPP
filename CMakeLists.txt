@@ -23,3 +23,6 @@ target_include_directories(StrongholdCPP PRIVATE include)
 include_directories(${CMAKE_CURRENT_SOURCE_DIR} C:/vcpkg/installed/x64-windows/include)
 link_directories(C:/vcpkg/installed/x64-windows/lib)
 
+#output dir
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin)
+
