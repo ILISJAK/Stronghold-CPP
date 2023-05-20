@@ -19,3 +19,7 @@ target_link_libraries(StrongholdCPP PRIVATE cpprestsdk::cpprest)
 
 # Add the include directory
 target_include_directories(StrongholdCPP PRIVATE include)
+
+include_directories(${CMAKE_CURRENT_SOURCE_DIR} C:/vcpkg/installed/x64-windows/include)
+link_directories(C:/vcpkg/installed/x64-windows/lib)
+
