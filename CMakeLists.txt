@@ -24,5 +24,13 @@ include_directories(${CMAKE_CURRENT_SOURCE_DIR} C:/vcpkg/installed/x64-windows/i
 link_directories(C:/vcpkg/installed/x64-windows/lib)
 
 #output dir
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin)
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 
+#fastcgi++
+include_directories("D:\\dev\\repos\\projekt\\Stronghold++\\bin\\fastcgipp\\include")
+
+#boost
+set(Boost_INCLUDE_DIR "D:\\dev\\repos\\projekt\\Stronghold++\\bin\\boost_1_82_0")
+set(Boost_LIBRARY_DIR "D:\\dev\\repos\\projekt\\Stronghold++\\bin\\boost_1_82_0/stage/lib")
+include_directories(${Boost_INCLUDE_DIR})
+link_directories(${Boost_LIBRARY_DIR})

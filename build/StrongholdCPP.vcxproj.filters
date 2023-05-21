@@ -40,6 +40,9 @@
     <ClCompile Include="D:\dev\repos\projekt\Stronghold++\src\Stronghold++\WoodCamp.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="D:\dev\repos\projekt\Stronghold++\src\Stronghold++\__testmain__.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="D:\dev\repos\projekt\Stronghold++\src\Stronghold++\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
