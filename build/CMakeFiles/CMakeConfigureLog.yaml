@@ -5,7 +5,7 @@ events:
     kind: "message-v1"
     backtrace:
       - "C:/Program Files/CMake/share/cmake-3.26/Modules/CMakeDetermineSystem.cmake:204 (message)"
-      - "CMakeLists.txt"
+      - "CMakeLists.txt:9 (project)"
     message: |
       The system is: Windows - 10.0.22621 - AMD64
   -
@@ -14,7 +14,7 @@ events:
       - "C:/Program Files/CMake/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
       - "C:/Program Files/CMake/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
       - "C:/Program Files/CMake/share/cmake-3.26/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt"
+      - "CMakeLists.txt:9 (project)"
     message: |
       Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
       Compiler:  
@@ -24,10 +24,10 @@ events:
       The output was:
       0
       MSBuild version 17.5.0+6f08c67f3 for .NET Framework
-      Build started 9.5.2023. 18:46:34.
+      Build started 4.6.2023. 19:52:51.
       Included response file: C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\MSBuild.rsp
       
-      Project "D:\\dev\\repos\\projekt\\Stronghold++\\build\\CMakeFiles\\3.26.3\\CompilerIdC\\CompilerIdC.vcxproj" on node 1 (default targets).
+      Project "D:\\dev\\repos\\projekt\\StrongholdCPP\\build\\CMakeFiles\\3.26.3\\CompilerIdC\\CompilerIdC.vcxproj" on node 1 (default targets).
       PrepareForBuild:
         Creating directory "Debug\\".
         Creating directory "Debug\\CompilerIdC.tlog\\".
@@ -41,13 +41,13 @@ events:
         CMakeCCompilerId.c
       Link:
         C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdC.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:"C:\\vcpkg\\installed\\x64-windows\\lib" /LIBPATH:"C:\\vcpkg\\installed\\x64-windows\\lib\\manual-link" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib "C:\\vcpkg\\installed\\x64-windows\\lib\\*.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdC.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdC.lib" /MACHINE:X64 Debug\\CMakeCCompilerId.obj
-        CompilerIdC.vcxproj -> D:\\dev\\repos\\projekt\\Stronghold++\\build\\CMakeFiles\\3.26.3\\CompilerIdC\\CompilerIdC.exe
+        CompilerIdC.vcxproj -> D:\\dev\\repos\\projekt\\StrongholdCPP\\build\\CMakeFiles\\3.26.3\\CompilerIdC\\CompilerIdC.exe
       AppLocalFromInstalled:
-        pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\dev\\repos\\projekt\\Stronghold++\\build\\CMakeFiles\\3.26.3\\CompilerIdC\\CompilerIdC.exe" "C:\\vcpkg\\installed\\x64-windows\\bin" "Debug\\CompilerIdC.tlog\\CompilerIdC.write.1u.tlog" "Debug\\vcpkg.applocal.log"
+        pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\dev\\repos\\projekt\\StrongholdCPP\\build\\CMakeFiles\\3.26.3\\CompilerIdC\\CompilerIdC.exe" "C:\\vcpkg\\installed\\x64-windows\\bin" "Debug\\CompilerIdC.tlog\\CompilerIdC.write.1u.tlog" "Debug\\vcpkg.applocal.log"
         'pwsh.exe' is not recognized as an internal or external command,
         operable program or batch file.
-        The command "pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\dev\\repos\\projekt\\Stronghold++\\build\\CMakeFiles\\3.26.3\\CompilerIdC\\CompilerIdC.exe" "C:\\vcpkg\\installed\\x64-windows\\bin" "Debug\\CompilerIdC.tlog\\CompilerIdC.write.1u.tlog" "Debug\\vcpkg.applocal.log"" exited with code 9009.
-        "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -ExecutionPolicy Bypass -noprofile -File "C:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\dev\\repos\\projekt\\Stronghold++\\build\\CMakeFiles\\3.26.3\\CompilerIdC\\CompilerIdC.exe" "C:\\vcpkg\\installed\\x64-windows\\bin" "Debug\\CompilerIdC.tlog\\CompilerIdC.write.1u.tlog" "Debug\\vcpkg.applocal.log"
+        The command "pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\dev\\repos\\projekt\\StrongholdCPP\\build\\CMakeFiles\\3.26.3\\CompilerIdC\\CompilerIdC.exe" "C:\\vcpkg\\installed\\x64-windows\\bin" "Debug\\CompilerIdC.tlog\\CompilerIdC.write.1u.tlog" "Debug\\vcpkg.applocal.log"" exited with code 9009.
+        "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -ExecutionPolicy Bypass -noprofile -File "C:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\dev\\repos\\projekt\\StrongholdCPP\\build\\CMakeFiles\\3.26.3\\CompilerIdC\\CompilerIdC.exe" "C:\\vcpkg\\installed\\x64-windows\\bin" "Debug\\CompilerIdC.tlog\\CompilerIdC.write.1u.tlog" "Debug\\vcpkg.applocal.log"
       PostBuildEvent:
         for %%i in (cl.exe) do @echo CMAKE_C_COMPILER=%%~$PATH:i
         :VCEnd
@@ -55,13 +55,13 @@ events:
       FinalizeBuildStatus:
         Deleting file "Debug\\CompilerIdC.tlog\\unsuccessfulbuild".
         Touching "Debug\\CompilerIdC.tlog\\CompilerIdC.lastbuildstate".
-      Done Building Project "D:\\dev\\repos\\projekt\\Stronghold++\\build\\CMakeFiles\\3.26.3\\CompilerIdC\\CompilerIdC.vcxproj" (default targets).
+      Done Building Project "D:\\dev\\repos\\projekt\\StrongholdCPP\\build\\CMakeFiles\\3.26.3\\CompilerIdC\\CompilerIdC.vcxproj" (default targets).
       
       Build succeeded.
           0 Warning(s)
           0 Error(s)
       
-      Time Elapsed 00:00:00.95
+      Time Elapsed 00:00:00.94
       
       
       Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
@@ -69,7 +69,7 @@ events:
       Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.vcxproj"
       
       The C compiler identification is MSVC, found in:
-        D:/dev/repos/projekt/Stronghold++/build/CMakeFiles/3.26.3/CompilerIdC/CompilerIdC.exe
+        D:/dev/repos/projekt/StrongholdCPP/build/CMakeFiles/3.26.3/CompilerIdC/CompilerIdC.exe
       
   -
     kind: "message-v1"
@@ -77,7 +77,7 @@ events:
       - "C:/Program Files/CMake/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
       - "C:/Program Files/CMake/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
       - "C:/Program Files/CMake/share/cmake-3.26/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt"
+      - "CMakeLists.txt:9 (project)"
     message: |
       Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
       Compiler:  
@@ -87,10 +87,10 @@ events:
       The output was:
       0
       MSBuild version 17.5.0+6f08c67f3 for .NET Framework
-      Build started 9.5.2023. 18:46:35.
+      Build started 4.6.2023. 19:52:52.
       Included response file: C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\MSBuild.rsp
       
-      Project "D:\\dev\\repos\\projekt\\Stronghold++\\build\\CMakeFiles\\3.26.3\\CompilerIdCXX\\CompilerIdCXX.vcxproj" on node 1 (default targets).
+      Project "D:\\dev\\repos\\projekt\\StrongholdCPP\\build\\CMakeFiles\\3.26.3\\CompilerIdCXX\\CompilerIdCXX.vcxproj" on node 1 (default targets).
       PrepareForBuild:
         Creating directory "Debug\\".
         Creating directory "Debug\\CompilerIdCXX.tlog\\".
@@ -104,13 +104,13 @@ events:
         CMakeCXXCompilerId.cpp
       Link:
         C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdCXX.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:"C:\\vcpkg\\installed\\x64-windows\\lib" /LIBPATH:"C:\\vcpkg\\installed\\x64-windows\\lib\\manual-link" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib "C:\\vcpkg\\installed\\x64-windows\\lib\\*.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdCXX.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdCXX.lib" /MACHINE:X64 Debug\\CMakeCXXCompilerId.obj
-        CompilerIdCXX.vcxproj -> D:\\dev\\repos\\projekt\\Stronghold++\\build\\CMakeFiles\\3.26.3\\CompilerIdCXX\\CompilerIdCXX.exe
+        CompilerIdCXX.vcxproj -> D:\\dev\\repos\\projekt\\StrongholdCPP\\build\\CMakeFiles\\3.26.3\\CompilerIdCXX\\CompilerIdCXX.exe
       AppLocalFromInstalled:
-        pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\dev\\repos\\projekt\\Stronghold++\\build\\CMakeFiles\\3.26.3\\CompilerIdCXX\\CompilerIdCXX.exe" "C:\\vcpkg\\installed\\x64-windows\\bin" "Debug\\CompilerIdCXX.tlog\\CompilerIdCXX.write.1u.tlog" "Debug\\vcpkg.applocal.log"
+        pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\dev\\repos\\projekt\\StrongholdCPP\\build\\CMakeFiles\\3.26.3\\CompilerIdCXX\\CompilerIdCXX.exe" "C:\\vcpkg\\installed\\x64-windows\\bin" "Debug\\CompilerIdCXX.tlog\\CompilerIdCXX.write.1u.tlog" "Debug\\vcpkg.applocal.log"
         'pwsh.exe' is not recognized as an internal or external command,
         operable program or batch file.
-        The command "pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\dev\\repos\\projekt\\Stronghold++\\build\\CMakeFiles\\3.26.3\\CompilerIdCXX\\CompilerIdCXX.exe" "C:\\vcpkg\\installed\\x64-windows\\bin" "Debug\\CompilerIdCXX.tlog\\CompilerIdCXX.write.1u.tlog" "Debug\\vcpkg.applocal.log"" exited with code 9009.
-        "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -ExecutionPolicy Bypass -noprofile -File "C:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\dev\\repos\\projekt\\Stronghold++\\build\\CMakeFiles\\3.26.3\\CompilerIdCXX\\CompilerIdCXX.exe" "C:\\vcpkg\\installed\\x64-windows\\bin" "Debug\\CompilerIdCXX.tlog\\CompilerIdCXX.write.1u.tlog" "Debug\\vcpkg.applocal.log"
+        The command "pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\dev\\repos\\projekt\\StrongholdCPP\\build\\CMakeFiles\\3.26.3\\CompilerIdCXX\\CompilerIdCXX.exe" "C:\\vcpkg\\installed\\x64-windows\\bin" "Debug\\CompilerIdCXX.tlog\\CompilerIdCXX.write.1u.tlog" "Debug\\vcpkg.applocal.log"" exited with code 9009.
+        "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -ExecutionPolicy Bypass -noprofile -File "C:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\dev\\repos\\projekt\\StrongholdCPP\\build\\CMakeFiles\\3.26.3\\CompilerIdCXX\\CompilerIdCXX.exe" "C:\\vcpkg\\installed\\x64-windows\\bin" "Debug\\CompilerIdCXX.tlog\\CompilerIdCXX.write.1u.tlog" "Debug\\vcpkg.applocal.log"
       PostBuildEvent:
         for %%i in (cl.exe) do @echo CMAKE_CXX_COMPILER=%%~$PATH:i
         :VCEnd
@@ -118,13 +118,13 @@ events:
       FinalizeBuildStatus:
         Deleting file "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild".
         Touching "Debug\\CompilerIdCXX.tlog\\CompilerIdCXX.lastbuildstate".
-      Done Building Project "D:\\dev\\repos\\projekt\\Stronghold++\\build\\CMakeFiles\\3.26.3\\CompilerIdCXX\\CompilerIdCXX.vcxproj" (default targets).
+      Done Building Project "D:\\dev\\repos\\projekt\\StrongholdCPP\\build\\CMakeFiles\\3.26.3\\CompilerIdCXX\\CompilerIdCXX.vcxproj" (default targets).
       
       Build succeeded.
           0 Warning(s)
           0 Error(s)
       
-      Time Elapsed 00:00:00.72
+      Time Elapsed 00:00:00.68
       
       
       Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
@@ -132,21 +132,23 @@ events:
       Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.vcxproj"
       
       The CXX compiler identification is MSVC, found in:
-        D:/dev/repos/projekt/Stronghold++/build/CMakeFiles/3.26.3/CompilerIdCXX/CompilerIdCXX.exe
+        D:/dev/repos/projekt/StrongholdCPP/build/CMakeFiles/3.26.3/CompilerIdCXX/CompilerIdCXX.exe
       
   -
     kind: "try_compile-v1"
     backtrace:
       - "C:/Program Files/CMake/share/cmake-3.26/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
       - "C:/Program Files/CMake/share/cmake-3.26/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt"
+      - "CMakeLists.txt:9 (project)"
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "D:/dev/repos/projekt/Stronghold++/build/CMakeFiles/CMakeScratch/TryCompile-8u0lwn"
-      binary: "D:/dev/repos/projekt/Stronghold++/build/CMakeFiles/CMakeScratch/TryCompile-8u0lwn"
+      source: "D:/dev/repos/projekt/StrongholdCPP/build/CMakeFiles/CMakeScratch/TryCompile-0hft4d"
+      binary: "D:/dev/repos/projekt/StrongholdCPP/build/CMakeFiles/CMakeScratch/TryCompile-0hft4d"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
       VCPKG_APPLOCAL_DEPS: "ON"
       VCPKG_TARGET_TRIPLET: "x64-windows"
       Z_VCPKG_ROOT_DIR: "C:/vcpkg"
@@ -154,31 +156,31 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: D:/dev/repos/projekt/Stronghold++/build/CMakeFiles/CMakeScratch/TryCompile-8u0lwn
+        Change Dir: D:/dev/repos/projekt/StrongholdCPP/build/CMakeFiles/CMakeScratch/TryCompile-0hft4d
         
-        Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_3bb05.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n && MSBuild version 17.5.0+6f08c67f3 for .NET Framework
-        Build started 9.5.2023. 18:46:37.
+        Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_ea576.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n && MSBuild version 17.5.0+6f08c67f3 for .NET Framework
+        Build started 4.6.2023. 19:52:53.
         Included response file: C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\MSBuild.rsp
         
-        Project "D:\\dev\\repos\\projekt\\Stronghold++\\build\\CMakeFiles\\CMakeScratch\\TryCompile-8u0lwn\\cmTC_3bb05.vcxproj" on node 1 (default targets).
+        Project "D:\\dev\\repos\\projekt\\StrongholdCPP\\build\\CMakeFiles\\CMakeScratch\\TryCompile-0hft4d\\cmTC_ea576.vcxproj" on node 1 (default targets).
         PrepareForBuild:
-          Creating directory "cmTC_3bb05.dir\\Debug\\".
-          Creating directory "D:\\dev\\repos\\projekt\\Stronghold++\\build\\CMakeFiles\\CMakeScratch\\TryCompile-8u0lwn\\Debug\\".
-          Creating directory "cmTC_3bb05.dir\\Debug\\cmTC_3bb05.tlog\\".
+          Creating directory "cmTC_ea576.dir\\Debug\\".
+          Creating directory "D:\\dev\\repos\\projekt\\StrongholdCPP\\build\\CMakeFiles\\CMakeScratch\\TryCompile-0hft4d\\Debug\\".
+          Creating directory "cmTC_ea576.dir\\Debug\\cmTC_ea576.tlog\\".
         InitializeBuildStatus:
-          Creating "cmTC_3bb05.dir\\Debug\\cmTC_3bb05.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Creating "cmTC_ea576.dir\\Debug\\cmTC_ea576.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
         ClCompile:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_3bb05.dir\\Debug\\\\" /Fd"cmTC_3bb05.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.26\\Modules\\CMakeCCompilerABI.c"
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_ea576.dir\\Debug\\\\" /Fd"cmTC_ea576.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.26\\Modules\\CMakeCCompilerABI.c"
           Microsoft (R) C/C++ Optimizing Compiler Version 19.35.32215 for x64
           CMakeCCompilerABI.c
           Copyright (C) Microsoft Corporation.  All rights reserved.
-          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_3bb05.dir\\Debug\\\\" /Fd"cmTC_3bb05.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.26\\Modules\\CMakeCCompilerABI.c"
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_ea576.dir\\Debug\\\\" /Fd"cmTC_ea576.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.26\\Modules\\CMakeCCompilerABI.c"
         Link:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"D:\\dev\\repos\\projekt\\Stronghold++\\build\\CMakeFiles\\CMakeScratch\\TryCompile-8u0lwn\\Debug\\cmTC_3bb05.exe" /INCREMENTAL /ILK:"cmTC_3bb05.dir\\Debug\\cmTC_3bb05.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/dev/repos/projekt/Stronghold++/build/CMakeFiles/CMakeScratch/TryCompile-8u0lwn/Debug/cmTC_3bb05.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/dev/repos/projekt/Stronghold++/build/CMakeFiles/CMakeScratch/TryCompile-8u0lwn/Debug/cmTC_3bb05.lib" /MACHINE:X64  /machine:x64 cmTC_3bb05.dir\\Debug\\CMakeCCompilerABI.obj
-          cmTC_3bb05.vcxproj -> D:\\dev\\repos\\projekt\\Stronghold++\\build\\CMakeFiles\\CMakeScratch\\TryCompile-8u0lwn\\Debug\\cmTC_3bb05.exe
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"D:\\dev\\repos\\projekt\\StrongholdCPP\\build\\CMakeFiles\\CMakeScratch\\TryCompile-0hft4d\\Debug\\cmTC_ea576.exe" /INCREMENTAL /ILK:"cmTC_ea576.dir\\Debug\\cmTC_ea576.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/dev/repos/projekt/StrongholdCPP/build/CMakeFiles/CMakeScratch/TryCompile-0hft4d/Debug/cmTC_ea576.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/dev/repos/projekt/StrongholdCPP/build/CMakeFiles/CMakeScratch/TryCompile-0hft4d/Debug/cmTC_ea576.lib" /MACHINE:X64  /machine:x64 cmTC_ea576.dir\\Debug\\CMakeCCompilerABI.obj
+          cmTC_ea576.vcxproj -> D:\\dev\\repos\\projekt\\StrongholdCPP\\build\\CMakeFiles\\CMakeScratch\\TryCompile-0hft4d\\Debug\\cmTC_ea576.exe
         PostBuildEvent:
           setlocal
-          C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe -noprofile -executionpolicy Bypass -file C:/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary D:/dev/repos/projekt/Stronghold++/build/CMakeFiles/CMakeScratch/TryCompile-8u0lwn/Debug/cmTC_3bb05.exe -installedDir C:/vcpkg/installed/x64-windows/debug/bin -OutVariable out
+          C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe -noprofile -executionpolicy Bypass -file C:/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary D:/dev/repos/projekt/StrongholdCPP/build/CMakeFiles/CMakeScratch/TryCompile-0hft4d/Debug/cmTC_ea576.exe -installedDir C:/vcpkg/installed/x64-windows/debug/bin -OutVariable out
           if %errorlevel% neq 0 goto :cmEnd
           :cmEnd
           endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
@@ -188,15 +190,15 @@ events:
           if %errorlevel% neq 0 goto :VCEnd
           :VCEnd
         FinalizeBuildStatus:
-          Deleting file "cmTC_3bb05.dir\\Debug\\cmTC_3bb05.tlog\\unsuccessfulbuild".
-          Touching "cmTC_3bb05.dir\\Debug\\cmTC_3bb05.tlog\\cmTC_3bb05.lastbuildstate".
-        Done Building Project "D:\\dev\\repos\\projekt\\Stronghold++\\build\\CMakeFiles\\CMakeScratch\\TryCompile-8u0lwn\\cmTC_3bb05.vcxproj" (default targets).
+          Deleting file "cmTC_ea576.dir\\Debug\\cmTC_ea576.tlog\\unsuccessfulbuild".
+          Touching "cmTC_ea576.dir\\Debug\\cmTC_ea576.tlog\\cmTC_ea576.lastbuildstate".
+        Done Building Project "D:\\dev\\repos\\projekt\\StrongholdCPP\\build\\CMakeFiles\\CMakeScratch\\TryCompile-0hft4d\\cmTC_ea576.vcxproj" (default targets).
         
         Build succeeded.
             0 Warning(s)
             0 Error(s)
         
-        Time Elapsed 00:00:00.86
+        Time Elapsed 00:00:00.68
         
       exitCode: 0
   -
@@ -204,14 +206,16 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-3.26/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
       - "C:/Program Files/CMake/share/cmake-3.26/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt"
+      - "CMakeLists.txt:9 (project)"
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "D:/dev/repos/projekt/Stronghold++/build/CMakeFiles/CMakeScratch/TryCompile-sudz7e"
-      binary: "D:/dev/repos/projekt/Stronghold++/build/CMakeFiles/CMakeScratch/TryCompile-sudz7e"
+      source: "D:/dev/repos/projekt/StrongholdCPP/build/CMakeFiles/CMakeScratch/TryCompile-2pr10e"
+      binary: "D:/dev/repos/projekt/StrongholdCPP/build/CMakeFiles/CMakeScratch/TryCompile-2pr10e"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
       VCPKG_APPLOCAL_DEPS: "ON"
       VCPKG_TARGET_TRIPLET: "x64-windows"
       Z_VCPKG_ROOT_DIR: "C:/vcpkg"
@@ -219,31 +223,31 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: D:/dev/repos/projekt/Stronghold++/build/CMakeFiles/CMakeScratch/TryCompile-sudz7e
+        Change Dir: D:/dev/repos/projekt/StrongholdCPP/build/CMakeFiles/CMakeScratch/TryCompile-2pr10e
         
-        Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_f5c08.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n && MSBuild version 17.5.0+6f08c67f3 for .NET Framework
-        Build started 9.5.2023. 18:46:38.
+        Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_956c0.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n && MSBuild version 17.5.0+6f08c67f3 for .NET Framework
+        Build started 4.6.2023. 19:52:54.
         Included response file: C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\MSBuild.rsp
         
-        Project "D:\\dev\\repos\\projekt\\Stronghold++\\build\\CMakeFiles\\CMakeScratch\\TryCompile-sudz7e\\cmTC_f5c08.vcxproj" on node 1 (default targets).
+        Project "D:\\dev\\repos\\projekt\\StrongholdCPP\\build\\CMakeFiles\\CMakeScratch\\TryCompile-2pr10e\\cmTC_956c0.vcxproj" on node 1 (default targets).
         PrepareForBuild:
-          Creating directory "cmTC_f5c08.dir\\Debug\\".
-          Creating directory "D:\\dev\\repos\\projekt\\Stronghold++\\build\\CMakeFiles\\CMakeScratch\\TryCompile-sudz7e\\Debug\\".
-          Creating directory "cmTC_f5c08.dir\\Debug\\cmTC_f5c08.tlog\\".
+          Creating directory "cmTC_956c0.dir\\Debug\\".
+          Creating directory "D:\\dev\\repos\\projekt\\StrongholdCPP\\build\\CMakeFiles\\CMakeScratch\\TryCompile-2pr10e\\Debug\\".
+          Creating directory "cmTC_956c0.dir\\Debug\\cmTC_956c0.tlog\\".
         InitializeBuildStatus:
-          Creating "cmTC_f5c08.dir\\Debug\\cmTC_f5c08.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Creating "cmTC_956c0.dir\\Debug\\cmTC_956c0.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
         ClCompile:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_f5c08.dir\\Debug\\\\" /Fd"cmTC_f5c08.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.26\\Modules\\CMakeCXXCompilerABI.cpp"
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_956c0.dir\\Debug\\\\" /Fd"cmTC_956c0.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.26\\Modules\\CMakeCXXCompilerABI.cpp"
           Microsoft (R) C/C++ Optimizing Compiler Version 19.35.32215 for x64
           CMakeCXXCompilerABI.cpp
           Copyright (C) Microsoft Corporation.  All rights reserved.
-          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_f5c08.dir\\Debug\\\\" /Fd"cmTC_f5c08.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.26\\Modules\\CMakeCXXCompilerABI.cpp"
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_956c0.dir\\Debug\\\\" /Fd"cmTC_956c0.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.26\\Modules\\CMakeCXXCompilerABI.cpp"
         Link:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"D:\\dev\\repos\\projekt\\Stronghold++\\build\\CMakeFiles\\CMakeScratch\\TryCompile-sudz7e\\Debug\\cmTC_f5c08.exe" /INCREMENTAL /ILK:"cmTC_f5c08.dir\\Debug\\cmTC_f5c08.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/dev/repos/projekt/Stronghold++/build/CMakeFiles/CMakeScratch/TryCompile-sudz7e/Debug/cmTC_f5c08.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/dev/repos/projekt/Stronghold++/build/CMakeFiles/CMakeScratch/TryCompile-sudz7e/Debug/cmTC_f5c08.lib" /MACHINE:X64  /machine:x64 cmTC_f5c08.dir\\Debug\\CMakeCXXCompilerABI.obj
-          cmTC_f5c08.vcxproj -> D:\\dev\\repos\\projekt\\Stronghold++\\build\\CMakeFiles\\CMakeScratch\\TryCompile-sudz7e\\Debug\\cmTC_f5c08.exe
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"D:\\dev\\repos\\projekt\\StrongholdCPP\\build\\CMakeFiles\\CMakeScratch\\TryCompile-2pr10e\\Debug\\cmTC_956c0.exe" /INCREMENTAL /ILK:"cmTC_956c0.dir\\Debug\\cmTC_956c0.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/dev/repos/projekt/StrongholdCPP/build/CMakeFiles/CMakeScratch/TryCompile-2pr10e/Debug/cmTC_956c0.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/dev/repos/projekt/StrongholdCPP/build/CMakeFiles/CMakeScratch/TryCompile-2pr10e/Debug/cmTC_956c0.lib" /MACHINE:X64  /machine:x64 cmTC_956c0.dir\\Debug\\CMakeCXXCompilerABI.obj
+          cmTC_956c0.vcxproj -> D:\\dev\\repos\\projekt\\StrongholdCPP\\build\\CMakeFiles\\CMakeScratch\\TryCompile-2pr10e\\Debug\\cmTC_956c0.exe
         PostBuildEvent:
           setlocal
-          C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe -noprofile -executionpolicy Bypass -file C:/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary D:/dev/repos/projekt/Stronghold++/build/CMakeFiles/CMakeScratch/TryCompile-sudz7e/Debug/cmTC_f5c08.exe -installedDir C:/vcpkg/installed/x64-windows/debug/bin -OutVariable out
+          C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe -noprofile -executionpolicy Bypass -file C:/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary D:/dev/repos/projekt/StrongholdCPP/build/CMakeFiles/CMakeScratch/TryCompile-2pr10e/Debug/cmTC_956c0.exe -installedDir C:/vcpkg/installed/x64-windows/debug/bin -OutVariable out
           if %errorlevel% neq 0 goto :cmEnd
           :cmEnd
           endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
@@ -253,15 +257,15 @@ events:
           if %errorlevel% neq 0 goto :VCEnd
           :VCEnd
         FinalizeBuildStatus:
-          Deleting file "cmTC_f5c08.dir\\Debug\\cmTC_f5c08.tlog\\unsuccessfulbuild".
-          Touching "cmTC_f5c08.dir\\Debug\\cmTC_f5c08.tlog\\cmTC_f5c08.lastbuildstate".
-        Done Building Project "D:\\dev\\repos\\projekt\\Stronghold++\\build\\CMakeFiles\\CMakeScratch\\TryCompile-sudz7e\\cmTC_f5c08.vcxproj" (default targets).
+          Deleting file "cmTC_956c0.dir\\Debug\\cmTC_956c0.tlog\\unsuccessfulbuild".
+          Touching "cmTC_956c0.dir\\Debug\\cmTC_956c0.tlog\\cmTC_956c0.lastbuildstate".
+        Done Building Project "D:\\dev\\repos\\projekt\\StrongholdCPP\\build\\CMakeFiles\\CMakeScratch\\TryCompile-2pr10e\\cmTC_956c0.vcxproj" (default targets).
         
         Build succeeded.
             0 Warning(s)
             0 Error(s)
         
-        Time Elapsed 00:00:00.66
+        Time Elapsed 00:00:00.65
         
       exitCode: 0
 ...

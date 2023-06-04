@@ -1,58 +1,61 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="D:\dev\repos\projekt\Stronghold++\src\Stronghold++\Archer.cpp">
+    <ClCompile Include="D:\dev\repos\projekt\StrongholdCPP\api\StrongholdAPI.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\dev\repos\projekt\Stronghold++\src\Stronghold++\Exception.cpp">
+    <ClCompile Include="D:\dev\repos\projekt\StrongholdCPP\src\Archer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\dev\repos\projekt\Stronghold++\src\Stronghold++\Knight.cpp">
+    <ClCompile Include="D:\dev\repos\projekt\StrongholdCPP\src\Exception.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\dev\repos\projekt\Stronghold++\src\Stronghold++\Lord.cpp">
+    <ClCompile Include="D:\dev\repos\projekt\StrongholdCPP\src\Knight.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\dev\repos\projekt\Stronghold++\src\Stronghold++\Maceman.cpp">
+    <ClCompile Include="D:\dev\repos\projekt\StrongholdCPP\src\Lord.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\dev\repos\projekt\Stronghold++\src\Stronghold++\Market.cpp">
+    <ClCompile Include="D:\dev\repos\projekt\StrongholdCPP\src\Maceman.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\dev\repos\projekt\Stronghold++\src\Stronghold++\Pikeman.cpp">
+    <ClCompile Include="D:\dev\repos\projekt\StrongholdCPP\src\Market.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\dev\repos\projekt\Stronghold++\src\Stronghold++\StoneQuarry.cpp">
+    <ClCompile Include="D:\dev\repos\projekt\StrongholdCPP\src\Pikeman.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\dev\repos\projekt\Stronghold++\src\Stronghold++\Structure.cpp">
+    <ClCompile Include="D:\dev\repos\projekt\StrongholdCPP\src\Player.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\dev\repos\projekt\Stronghold++\src\Stronghold++\Town.cpp">
+    <ClCompile Include="D:\dev\repos\projekt\StrongholdCPP\src\StoneQuarry.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\dev\repos\projekt\Stronghold++\src\Stronghold++\Troop.cpp">
+    <ClCompile Include="D:\dev\repos\projekt\StrongholdCPP\src\Structure.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\dev\repos\projekt\Stronghold++\src\Stronghold++\WheatFarm.cpp">
+    <ClCompile Include="D:\dev\repos\projekt\StrongholdCPP\src\Town.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\dev\repos\projekt\Stronghold++\src\Stronghold++\WoodCamp.cpp">
+    <ClCompile Include="D:\dev\repos\projekt\StrongholdCPP\src\Troop.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\dev\repos\projekt\Stronghold++\src\Stronghold++\__testmain__.cpp">
+    <ClCompile Include="D:\dev\repos\projekt\StrongholdCPP\src\WheatFarm.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\dev\repos\projekt\Stronghold++\src\Stronghold++\main.cpp">
+    <ClCompile Include="D:\dev\repos\projekt\StrongholdCPP\src\WoodCamp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\dev\repos\projekt\StrongholdCPP\src\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="D:\dev\repos\projekt\Stronghold++\CMakeLists.txt" />
+    <CustomBuild Include="D:\dev\repos\projekt\StrongholdCPP\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Source Files">
-      <UniqueIdentifier>{FB4A6083-FDCF-32E4-A7B6-3D0DA2CFD4DE}</UniqueIdentifier>
+      <UniqueIdentifier>{748BED44-CC2D-35BE-8E4E-FF5AFC165A99}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
