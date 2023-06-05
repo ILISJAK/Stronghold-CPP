@@ -25,6 +25,7 @@ public:
 	int getCost();
 	bool getMounted();
 	bool getRanged();
+	std::string getIdentifier();
 	// setteri
 	void setHealth(double health);
 	void setDamage(double damage);

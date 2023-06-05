@@ -31,11 +31,11 @@ public:
     void buyFromMarket(std::string what, int amount);
     void sellToMarket(std::string what, int amount);
     void destroyStructure(Structure* structure);
-    void buildStructure(Structure* structure);
+    void buildStructure(Structure* structure, int amount);
     void buildHousing(int n = 1);
     bool sufficientRations();
     void trainVillager(int = 1);
-    void trainTroop(Troop* troop);
+    void trainTroop(Troop* troop, int amount);
     void raid(Town* town);
     void attackLord(Town* town);
 

@@ -25,8 +25,8 @@ Troop::Troop(std::string identifier, double maxHealth, double damage, double def
 }
 Troop::~Troop() {}
 
-Troop::Troop(const Troop& troop) {}
-void Troop::attack(Troop* target)
+Troop::Troop(const Troop &troop) {}
+void Troop::attack(Troop *target)
 {
 	if (target == nullptr)
 	{
@@ -79,6 +79,11 @@ bool Troop::getMounted()
 bool Troop::getRanged()
 {
 	return ranged;
+}
+
+std::string Troop::getIdentifier()
+{
+	return troopIdentifier;
 }
 
 // setteri
