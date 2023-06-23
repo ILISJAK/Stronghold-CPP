@@ -7,6 +7,8 @@ base_url = "http://localhost:8080"
 def start_game(num_players):
     start_game_url = base_url + "/start-game"
     data = {"numPlayers": num_players}
+
+    print("\nRequest data:", data)  # debug logging
     try:
         response = requests.post(start_game_url, json=data)
         response.raise_for_status()

@@ -168,26 +168,25 @@ void Town::trainVillager(int n)
 
 void Town::buildStructure(Structure *structure, int amount)
 {
-    int counter = 0;
-    for (int i = 0; i < amount && structure && gold >= structure->getGoldCost() && wood >= structure->getWoodCost() && stone >= structure->getStoneCost() && (activePopulation + 2) <= population; i++)
-    {
-        setActivePopulation(getActivePopulation() + 2);
-        setGold(getGold() - structure->getGoldCost());
-        setWood(getWood() - structure->getWoodCost());
-        setStone(getStone() - structure->getStoneCost());
-        structures.push_back(structure);
-        counter++;
-    }
-    if (counter == 0)
-    {
-        std::cout << "Unable to build " << structure->getType() << " or insufficient resources." << std::endl;
-    }
-    else
-    {
-        std::cout << "Town " << getTeam() << " has built " << counter << " " << structure->getType() << "." << std::endl;
-    }
+	int counter = 0;
+	for (int i = 0; i < amount && structure && gold >= structure->getGoldCost() && wood >= structure->getWoodCost() && stone >= structure->getStoneCost() && (activePopulation + 2) <= population; i++)
+	{
+		setActivePopulation(getActivePopulation() + 2);
+		setGold(getGold() - structure->getGoldCost());
+		setWood(getWood() - structure->getWoodCost());
+		setStone(getStone() - structure->getStoneCost());
+		structures.push_back(structure);
+		counter++;
+	}
+	if (counter == 0)
+	{
+		std::cout << "Unable to build " << structure->getType() << " or insufficient resources." << std::endl;
+	}
+	else
+	{
+		std::cout << "Town " << getTeam() << " has built " << counter << " " << structure->getType() << "." << std::endl;
+	}
 }
-
 
 void Town::destroyStructure(Structure *structure)
 {
@@ -307,66 +306,15 @@ void Town::trainTroop(Troop *troop, int amount) // updated ver
 	}
 }
 
-// void Town::raid(Town* town) // eraseat iz vektora pa obrisat
-//{
-//     std::cout << "Town " << getTeam() << " has attacked town " << town->getTeam() << "!" << std::endl;
-//     std::cout.flush();
-//     int allyCasualties = 0;
-//     int enemyCasualties = 0;
-//     while (1)
-//     {
-//         Troop* attacker = this->army.front();
-//         Troop* target = town->army.front();
-//         if (!this->army.empty())
-//         {
-//             if (!town->army.empty())
-//             {
-//                 attacker->attack(target);
-//                 if (target->getHealth() <= 0)
-//                 {
-//                     enemyCasualties++;
-//                     town->army.erase(town->army.begin());
-//                     delete target;
-//                 }
-//                 if (attacker->getHealth() <= 0)
-//                 {
-//                     allyCasualties++;
-//                     this->army.erase(this->army.begin());
-//                     delete attacker;
-//                     setActivePopulation(getActivePopulation() - 1);
-//                     setPopulation(getPopulation() - 1);
-//                 }
-//             }
-//             else
-//             {
-//                 std::cout << "Town " << getTeam() << " has won the battle." << std::endl;
-//                 break;
-//             }
-//         }
-//         else
-//         {
-//             std::cout << "Town " << town->getTeam() << " has won the battle." << std::endl;
-//             break;
-//         }
-//     }
-//     std::cout << "Town " << getTeam() << " casualties: " << allyCasualties << std::endl;
-//     std::cout << "Town " << town->getTeam() << " casualties: " << enemyCasualties << std::endl;
-// }
-
-void Town::raid(Town *town) // eraseat iz vektora pa obrisat
+void Town::raid(Town *town)
 {
-	std::cout << "Town " << getTeam() << " has attacked town " << town->getTeam() << "!" << std::endl;
+	std::cout << "DEBUG: Town " << getTeam() << " is raiding " << town->getTeam() << "!" << std::endl;
 	int allyCasualties = 0;
 	int enemyCasualties = 0;
-	bool hasAttackPriority = true; // pratimo koja strana napada (izbjegavamo beskonacnu petlju)
+	bool hasAttackPriority = true;
 
-	while (1)
+	while (!this->army.empty() && !town->army.empty())
 	{
-		if (this->army.empty() || town->army.empty())
-		{
-			break;
-		}
-
 		Troop *attacker;
 		Troop *target;
 
@@ -381,103 +329,155 @@ void Town::raid(Town *town) // eraseat iz vektora pa obrisat
 			target = this->army.front();
 		}
 
+		std::cout << "DEBUG: Attacker: " << attacker->getIdentifier() << ", Health: " << attacker->getHealth() << std::endl;
+		std::cout << "DEBUG: Target: " << target->getIdentifier() << ", Health: " << target->getHealth() << std::endl;
+
 		attacker->attack(target);
+
+		std::cout << "DEBUG: Attacker health: " << attacker->getHealth() << std::endl;
+		std::cout << "DEBUG: Target health: " << target->getHealth() << std::endl;
+
 		if (target->getHealth() <= 0)
 		{
 			if (hasAttackPriority)
 			{
 				enemyCasualties++;
+				delete target;
 				town->army.erase(town->army.begin());
+				town->setActivePopulation(town->getActivePopulation() - 1);
+				town->setPopulation(town->getPopulation() - 1);
+				std::cout << "DEBUG: Enemy troop " << target->getIdentifier() << " destroyed." << std::endl;
 			}
 			else
 			{
 				allyCasualties++;
+				delete target;
 				this->army.erase(this->army.begin());
+				setActivePopulation(getActivePopulation() - 1);
+				setPopulation(getPopulation() - 1);
+				std::cout << "DEBUG: Ally troop " << target->getIdentifier() << " destroyed." << std::endl;
 			}
-			delete target;
 		}
+
 		if (attacker->getHealth() <= 0)
 		{
 			if (hasAttackPriority)
 			{
 				allyCasualties++;
+				delete attacker;
 				this->army.erase(this->army.begin());
 				setActivePopulation(getActivePopulation() - 1);
 				setPopulation(getPopulation() - 1);
+				std::cout << "DEBUG: Ally troop " << attacker->getIdentifier() << " destroyed." << std::endl;
 			}
 			else
 			{
 				enemyCasualties++;
+				delete attacker;
 				town->army.erase(town->army.begin());
+				town->setActivePopulation(town->getActivePopulation() - 1);
+				town->setPopulation(town->getPopulation() - 1);
+				std::cout << "DEBUG: Enemy troop " << attacker->getIdentifier() << " destroyed." << std::endl;
 			}
-			delete attacker;
 		}
 
-		hasAttackPriority = !hasAttackPriority; // switchamo stranu
+		hasAttackPriority = !hasAttackPriority;
 	}
 
-	std::cout << "Town " << getTeam() << " casualties: " << allyCasualties << std::endl;
-	std::cout << "Town " << town->getTeam() << " casualties: " << enemyCasualties << std::endl;
+	if (enemyCasualties > 0)
+	{
+		std::cout << "DEBUG: Resources plundered: ";
+		int plunderedGold = enemyCasualties * 10;
+		int plunderedRations = enemyCasualties * 10;
+		int plunderedStone = enemyCasualties * 10;
+		int plunderedWood = enemyCasualties * 10;
+
+		this->gold += plunderedGold;
+		this->rations += plunderedRations;
+		this->stone += plunderedStone;
+		this->wood += plunderedWood;
+
+		std::cout << "Gold: " << plunderedGold << ", Rations: " << plunderedRations << ", Stone: " << plunderedStone << ", Wood: " << plunderedWood << std::endl;
+	}
+
+	std::cout << "DEBUG: Town " << getTeam() << " casualties: " << allyCasualties << std::endl;
+	std::cout << "DEBUG: Town " << town->getTeam() << " casualties: " << enemyCasualties << std::endl;
 }
 
-void Town::attackLord(Town *town)
+void Town::attackLord(Town *targetTown)
 {
-	if (town == nullptr)
+	if (targetTown == nullptr || targetTown->lord == nullptr)
 	{
-		std::cout << "Town doesnt exist." << std::endl;
+		std::cerr << "Invalid target town or lord." << std::endl;
 		return;
 	}
-	if (town->lord == nullptr)
+
+	std::cout << "DEBUG: Starting attackLord function" << std::endl;
+	std::cout << "DEBUG: Attacking town " << targetTown->getTeam() << std::endl;
+
+	std::cout << "DEBUG: Number of attackers: " << this->army.size() << std::endl;
+
+	auto it = this->army.begin(); // Iterator to track the current attacker
+
+	while (it != this->army.end() && targetTown->lord->getHealth() > 0)
 	{
-		std::cout << "Lord doesnt exist." << std::endl;
-		delete town;
-		town = nullptr;
-		return;
-	}
-	std::cout << "Town " << getTeam() << " has attacked the town " << town->getTeam() << " Lord!" << std::endl;
-	while (1)
-	{
-		Troop *attacker = this->army.front();
-		Troop *target = town->lord;
-		if (!this->army.empty())
+		std::cout << "DEBUG: Inside attack loop" << std::endl;
+
+		// Get the current attacker
+		Troop *attacker = *it;
+
+		// Perform the attack
+		attacker->attack(targetTown->lord);
+
+		std::cout << "DEBUG: Attacker health: " << attacker->getHealth() << std::endl;
+		std::cout << "DEBUG: Lord health: " << targetTown->lord->getHealth() << std::endl;
+
+		// Check if the attacker has been killed
+		if (attacker->getHealth() <= 0)
 		{
-			if (town->army.empty())
-			{
-				attacker->attack(target);
-				if (target->getHealth() <= 0)
-				{
-					this->gold += town->gold;
-					this->rations += town->rations;
-					this->stone += town->stone;
-					this->wood += town->wood;
-					this->population += town->population;
-					std::cout << "All of town " << town->getTeam() << "'s resources have been plundered! " << std::endl;
-					std::cout << town->population << " citizen(s) have assimilated to town " << getTeam() << "." << std::endl;
-					delete town;
-					std::cout << "Town " << getTeam() << " remaining troops: " << this->army.size() << std::endl;
-					return;
-				}
-				if (attacker->getHealth() <= 0)
-				{
-					this->army.erase(this->army.begin());
-					delete attacker;
-					setActivePopulation(getActivePopulation() - 1);
-					setPopulation(getPopulation() - 1);
-				}
-			}
-			else
-			{
-				std::cout << "Town " << town->getTeam() << " lord is still protected." << std::endl;
-				return;
-			}
+			std::cout << "DEBUG: Attacker has been killed" << std::endl;
+
+			// Erase the attacker from the army and delete it
+			it = this->army.erase(it);
+			delete attacker;
+
+			// Update the town's population
+			setActivePopulation(getActivePopulation() - 1);
+			setPopulation(getPopulation() - 1);
 		}
 		else
 		{
-			target->info();
-			std::cout << std::endl;
-			return;
+			++it; // Move the iterator to the next attacker
+		}
+
+		// Check if the lord has been killed
+		if (targetTown->lord->getHealth() <= 0)
+		{
+			std::cout << "DEBUG: Lord has been killed" << std::endl;
+
+			// Plunder the resources and assimilate the population
+			this->gold += targetTown->gold;
+			this->rations += targetTown->rations;
+			this->stone += targetTown->stone;
+			this->wood += targetTown->wood;
+			this->population += targetTown->population;
+
+			// Destroy the target lord
+			delete targetTown->lord;
+			targetTown->lord = nullptr;
 		}
 	}
+
+	if (this->army.empty())
+	{
+		std::cout << "DEBUG: No more attackers remaining" << std::endl;
+	}
+	else if (targetTown->lord->getHealth() <= 0)
+	{
+		std::cout << "DEBUG: Lord has been defeated" << std::endl;
+	}
+
+	std::cout << "DEBUG: End of attackLord function" << std::endl;
 }
 
 // getteri
@@ -488,6 +488,10 @@ std::vector<Town *> &Town::getAllTowns()
 std::vector<Structure *> Town::getStructures()
 {
 	return structures;
+}
+std::vector<Troop *> Town::getArmy()
+{
+	return army;
 }
 char Town::getTeam()
 {

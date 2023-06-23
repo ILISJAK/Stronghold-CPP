@@ -7,7 +7,7 @@
 #define IDENTIFIER "LORD"
 #define MAXHEALTH 250
 #define DAMAGE 60
-#define DEFENSE 100
+#define DEFENSE 5
 #define AGILITY 10
 #define COST 50
 #define MOUNTED false

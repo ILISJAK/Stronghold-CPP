@@ -26,6 +26,7 @@ Troop::Troop(std::string identifier, double maxHealth, double damage, double def
 Troop::~Troop() {}
 
 Troop::Troop(const Troop &troop) {}
+
 void Troop::attack(Troop *target)
 {
 	if (target == nullptr)
@@ -33,9 +34,33 @@ void Troop::attack(Troop *target)
 		std::cout << "target is nullptr" << std::endl;
 		return;
 	}
-	target->health -= this->damage;
-	this->health -= target->damage;
+
+	// Calculate damage dealt by the attacker
+	int attackerDamage = this->damage - target->defense;
+	if (attackerDamage < 0)
+	{
+		attackerDamage = 0; // Ensure non-negative damage
+	}
+
+	// Calculate dodge chance based on the agility difference
+	double dodgeChance = (target->agility - this->agility) * 0.01;
+	if (dodgeChance < 0)
+	{
+		dodgeChance = 0; // Ensure non-negative dodge chance
+	}
+
+	// Apply dodge chance to the damage dealt by the attacker
+	double randomValue = static_cast<double>(rand()) / RAND_MAX; // Generate random value between 0 and 1
+	if (randomValue <= dodgeChance)
+	{
+		attackerDamage = 0; // Attacker's damage is dodged
+		std::cout << "Target dodged the attack!" << std::endl;
+	}
+
+	// Reduce target's health by the calculated damage
+	target->health -= attackerDamage;
 }
+
 void const Troop::info()
 {
 	std::cout << troopIdentifier << " ";

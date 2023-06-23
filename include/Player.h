@@ -7,13 +7,14 @@ class Player
 {
 private:
     char identifier;
-    Town* town;
+    Town *town;
 
 public:
-    Player(Town* town);
+    Player(Town *town);
 
     char getIdentifier() const;
-    Town* getTown() const;
+    Town *getTown() const;
+    void setTown(Town *town);
 };
 
 #endif // PLAYER_HPP

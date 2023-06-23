@@ -40,6 +40,9 @@
     <ClCompile Include="D:\dev\repos\projekt\StrongholdCPP\src\Troop.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="D:\dev\repos\projekt\StrongholdCPP\src\TurnManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="D:\dev\repos\projekt\StrongholdCPP\src\WheatFarm.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>

@@ -42,6 +42,7 @@ public:
     // getteri
     static std::vector<Town*>& getAllTowns();
     std::vector<Structure*> getStructures();
+    std::vector<Troop*> getArmy();
     char getTeam();
     double getGold();
     int getRations();

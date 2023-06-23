@@ -387,6 +387,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClCompile Include="D:\dev\repos\projekt\StrongholdCPP\src\Structure.cpp" />
     <ClCompile Include="D:\dev\repos\projekt\StrongholdCPP\src\Town.cpp" />
     <ClCompile Include="D:\dev\repos\projekt\StrongholdCPP\src\Troop.cpp" />
+    <ClCompile Include="D:\dev\repos\projekt\StrongholdCPP\src\TurnManager.cpp" />
     <ClCompile Include="D:\dev\repos\projekt\StrongholdCPP\src\WheatFarm.cpp" />
     <ClCompile Include="D:\dev\repos\projekt\StrongholdCPP\src\WoodCamp.cpp" />
     <ClCompile Include="D:\dev\repos\projekt\StrongholdCPP\src\main.cpp" />
